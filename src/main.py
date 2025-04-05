@@ -1,3 +1,4 @@
+from inline_markdown import split_nodes_delimiter
 from textnode import TextType, TextNode
 from htmlnode import HTMLNode, LeafNode, ParentNode
 def main():
@@ -32,5 +33,10 @@ def main():
     child_node = ParentNode("span", [grandchild_node])
     parent_node = ParentNode("div", [child_node])
     print(parent_node.to_html())
+
+
+    node = TextNode("This is text with a **code block** word", TextType.TEXT)
+    new_nodes = split_nodes_delimiter([node], "**", TextType.CODE)
+    print(new_nodes)
 if __name__ == "__main__":
     main()
