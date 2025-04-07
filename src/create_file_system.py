@@ -4,7 +4,7 @@ import shutil, os
 
 
 def delete_all_public_files():
-    directory = Path("public/")
+    directory = Path("docs/")
 
     for filename in os.listdir(directory):
         filepath = os.path.join(directory, filename)
@@ -15,7 +15,7 @@ def delete_all_public_files():
 
 def copy_all_files():
     # copy_directory('src/', 'public/')
-    copy_directory('static/', 'public/')
+    copy_directory('static/', 'docs/')
     
 def copy_directory(src, dest):
     if not os.path.exists(dest):
