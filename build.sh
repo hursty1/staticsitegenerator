@@ -1,4 +1,4 @@
 #!/bin/bash
 
-python3 src/main.py "/hursty1/"
+python3 src/main.py "/staticsitegenerator/"
 cd docs && python3 -m http.server 8888
