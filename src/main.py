@@ -1,4 +1,5 @@
 from create_file_system import copy_all_files, delete_all_public_files
+from html_generator import generate_page, generate_pages_recursive
 from inline_markdown import split_nodes_delimiter, split_nodes_image, text_to_textnodes
 from markdown_Blocks import block_to_block_type, markdown_to_blocks
 from textnode import TextType, TextNode
@@ -81,5 +82,11 @@ def test():
 def main():
     delete_all_public_files()
     copy_all_files()
+    generate_pages_recursive('content/', 'template.html', 'public/')
+    # generate_page('content/index.md', 'template.html', 'public/')
+    # generate_page('content/contact/index.md', 'template.html', 'public/contact/')
+    # generate_page('content/blog/glorfindel/index.md', 'template.html', 'public/blog/glorfindel/')
+    # generate_page('content/blog/majesty/index.md', 'template.html', 'public/blog/majesty/')
+    # generate_page('content/blog/tom/index.md', 'template.html', 'public/blog/tom/')
 if __name__ == "__main__":
     main()

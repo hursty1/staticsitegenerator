@@ -15,7 +15,7 @@ def delete_all_public_files():
 
 def copy_all_files():
     # copy_directory('src/', 'public/')
-    copy_directory('src/static/', 'public/')
+    copy_directory('static/', 'public/')
     
 def copy_directory(src, dest):
     if not os.path.exists(dest):
